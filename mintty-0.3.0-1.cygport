@@ -7,7 +7,10 @@ src_compile() {
 	cd ${B}
 	cygmake
 
-	if check_prog convert # ImageMagick
+	if check_prog gm		# GraphicsMagick
+	then
+		gm convert icon/terminal.ico icon/mintty.png
+	elif check_prog convert	# ImageMagick
 	then
 		convert icon/terminal.ico icon/mintty.png
 	fi
@@ -20,8 +23,15 @@ src_install() {
 	for ((n=0; n < 3; n++))
 	do
 		res=$(( 16 * (n+1) ))
-		insinto /usr/share/icons/hicolor/${res}x${res}/apps
-		newins icon/mintty-$n.png mintty.png
+		if [ -e icon/mintty.png.$n ]	# GraphicsMagick
+		then
+			insinto /usr/share/icons/hicolor/${res}x${res}/apps
+			newins icon/mintty.png.$n mintty.png
+		elif [ -e icon/mintty-$n.png ]	# ImageMagick
+		then
+			insinto /usr/share/icons/hicolor/${res}x${res}/apps
+			newins icon/mintty-$n.png mintty.png
+		fi
 	done
 
 	make_desktop_entry mintty MinTTY mintty "System;TerminalEmulator"
