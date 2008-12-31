@@ -1,0 +1,73 @@
+mintty
+------------------------------------------
+MinTTY is a terminal emulator for Cygwin.  Features include:
+
+* Xterm-compatible terminal emulation, including support for modifier 
+  keys and application mouse mode.
+* Native Windows user interface that tries to keep things simple.
+* Drag&drop and copy&pasting of text and files. (The latter are inserted 
+  as quoted filenames.)
+* Mousewheel events can be sent as arrow keys. (This allows mousewheel 
+  scrolling e.g. in less.)
+* Options are stored in a text file. No registry entries.
+* Window transparency.
+* Small executable size (currently <120K). 
+
+Runtime requirements:
+  cygwin-1.5.25-15
+
+Build requirements:
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gcc-core-3.4.4-3
+  ImageMagick-6.4.8.2-1
+  make-3.81-1
+  w32api-3.12-1
+
+Canonical website:
+  http://code.google.com/p/mintty/
+
+Canonical download:
+  http://code.google.com/p/mintty/downloads/list
+
+-------------------------------------------
+
+Build instructions:
+  unpack mintty-0.3.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./mintty-0.3.0-X.cygport all
+
+This will create:
+  /usr/src/mintty-0.3.0-X-src.tar.bz2
+  /usr/src/mintty-0.3.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/mintty.sh
+  /etc/preremove/mintty.sh
+  /usr/bin/mintty.exe
+  /usr/share/applications/mintty.desktop
+  /usr/share/doc/mintty-0.3.0/COPYING
+  /usr/share/doc/mintty-0.3.0/INSTALL
+  /usr/share/doc/mintty-0.3.0/LICENSE
+  /usr/share/doc/mintty-0.3.0/LICENSE.Oxygen
+  /usr/share/doc/mintty-0.3.0/LICENSE.PuTTY
+  /usr/share/doc/mintty-0.3.0/html/readme.html
+  /usr/share/icons/hicolor/16x16/apps/mintty.png
+  /usr/share/icons/hicolor/32x32/apps/mintty.png
+  /usr/share/icons/hicolor/48x48/apps/mintty.png
+
+------------------
+
+Port Notes:
+
+----- version 0.3.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

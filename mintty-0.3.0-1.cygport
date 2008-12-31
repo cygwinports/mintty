@@ -1,0 +1,30 @@
+DESCRIPTION="Cygwin terminal emulator"
+HOMEPAGE="http://code.google.com/p/mintty/"
+SRC_URI="http://mintty.googlecode.com/files/${P}-src.tgz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+
+	if check_prog convert # ImageMagick
+	then
+		convert icon/terminal.ico icon/mintty.png
+	fi
+}
+
+src_install() {
+	cd ${B}
+	dobin mintty.exe
+
+	for ((n=0; n < 3; n++))
+	do
+		res=$(( 16 * (n+1) ))
+		insinto /usr/share/icons/hicolor/${res}x${res}/apps
+		newins icon/mintty-$n.png mintty.png
+	done
+
+	make_desktop_entry mintty MinTTY mintty "System;TerminalEmulator"
+}
+DOCS="LICENSE.Oxygen LICENSE.PuTTY"
+HTMLDOCS="docs/readme.html"
