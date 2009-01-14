@@ -32,15 +32,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack mintty-0.3.3-X-src.tar.bz2
+  unpack mintty-0.3.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./mintty-0.3.3-X.cygport all
+  cygport ./mintty-0.3.4-X.cygport all
 
 This will create:
-  /usr/src/mintty-0.3.3-X-src.tar.bz2
-  /usr/src/mintty-0.3.3-X.tar.bz2
+  /usr/src/mintty-0.3.4-X-src.tar.bz2
+  /usr/src/mintty-0.3.4-X.tar.bz2
 
 -------------------------------------------
 
@@ -49,18 +49,18 @@ Files included in the binary package:
   /etc/postinstall/mintty.sh
   /etc/preremove/mintty.sh
   /usr/bin/mintty.exe
-  /usr/share/doc/mintty-0.3.3/COPYING
-  /usr/share/doc/mintty-0.3.3/INSTALL
-  /usr/share/doc/mintty-0.3.3/LICENSE
-  /usr/share/doc/mintty-0.3.3/LICENSE.Oxygen
-  /usr/share/doc/mintty-0.3.3/LICENSE.PuTTY
-  /usr/share/doc/mintty-0.3.3/html/readme.html
+  /usr/share/doc/mintty-0.3.4/COPYING
+  /usr/share/doc/mintty-0.3.4/INSTALL
+  /usr/share/doc/mintty-0.3.4/LICENSE
+  /usr/share/doc/mintty-0.3.4/LICENSE.Oxygen
+  /usr/share/doc/mintty-0.3.4/LICENSE.PuTTY
+  /usr/share/doc/mintty-0.3.4/html/readme.html
 
 ------------------
 
 Port Notes:
 
------ version 0.3.3-1 -----
+----- version 0.3.4-1 -----
 Version bump.
 
 ----- version 0.3.2-1 -----
