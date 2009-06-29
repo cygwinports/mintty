@@ -1,5 +1,5 @@
 category: Shells
-requires: cygwin bash cygutils
+requires: bash cygutils
 sdesc: "Cygwin terminal emulator"
 ldesc: "MinTTY is a terminal emulator for Cygwin.  Features include:
 * Xterm-compatible terminal emulation, including support for modifier
